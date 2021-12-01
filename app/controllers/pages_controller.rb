@@ -8,7 +8,11 @@ class PagesController < ApplicationController
 
   def search
     client = Client.new
-    @response = client.search_date(params[:date])
+    begin
+      @response = client.search_date(params[:date])
+    rescue ApiExceptions::BadRequestError
+      @error = true
+    end
     render 'pages/start'
   end
 end
