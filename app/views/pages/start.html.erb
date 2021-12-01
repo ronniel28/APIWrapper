@@ -1,13 +1,7 @@
-<h1>Search Date </h1>
-
-<%= form_with url: search_date_path, method: :get do |form| %>
-  <%= form.label :date, "Select Date" %>
-  <%= form.text_field :date %>
-  <%= form.submit %>
-<% end %>
 
 
 <% if @response %>
+ 
   <div class="z-30 relative items-center justify-center w-full h-full overflow-auto">
     <div class="inset-0 h-screen bg-cover bg-center" 
         style=" 
